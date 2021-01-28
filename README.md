@@ -25,11 +25,6 @@ DICAS ÚTEIS:
 
 Boa sorte!!!
 
-
-==========================================================================================
-
-# test-via-varejo
-
 ## Description
 
 - Test Framework in Java/Maven that runs a suite of selenium test, target https://bit.ly/3jOMrR9 web page, that ensure the search form page is working as expected.
