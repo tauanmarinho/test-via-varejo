@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Via Varejo UI test Suite">
+    <test name="Search Page">
+        <classes>
+            <class name="com.viavarejo.tests.SearchPageTest" />
+        </classes>
+    </test>
+</suite>
