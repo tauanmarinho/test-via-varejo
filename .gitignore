@@ -27,3 +27,5 @@ target
 .idea
 
 test-output
+
+*.iml
