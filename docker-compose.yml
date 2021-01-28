@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  zalenium:
+    image: "dosel/zalenium"
+    container_name: zalenium
+    hostname: zalenium
+    tty: true
+    volumes:
+      - /tmp/videos:/home/seluser/videos
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports: ["5555:4444"]
+    command: >
+      start --desiredContainers 4
+            --maxDockerSeleniumContainers 10
+            --maxTestSessions 1
+            --screenWidth 1280 --screenHeight 1024
+            --timeZone "Europe/Dublin"
+            --videoRecordingEnabled true
+            --sendAnonymousUsageInfo false
+    environment:
+      - ZALENIUM_NO_PROXY= localhost,127.0.0.1
+      - SEL_BROWSER_TIMEOUT_SECS=300
+      - PULL_SELENIUM_IMAGE=true
+      - ZALENIUM_PROXY_CLEANUP_TIMEOUT=600
